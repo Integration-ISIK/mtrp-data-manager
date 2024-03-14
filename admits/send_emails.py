@@ -1,10 +1,15 @@
 import os
+import csv
 import json
+import time
 
 from multiprocessing import Pool
 
 import email
 import smtplib
+
+import numpy as np
+import pandas as pd
 
 creds = json.load(open("admits/credentials.json"))
 
@@ -16,34 +21,49 @@ def reg_check(reg_no: str):
     return "KB" not in reg_no
 
 
-def send_email(reg_no: str):
-    with smtplib.SMTP("mail.isical.ac.in", 587) as smtp:
-        try:
-            with open(f"admits/emails/{reg_no}.eml", "rb") as fp:
-                msg = email.message_from_binary_file(fp)
-                smtp.send_message(msg)
-            print(f"ADMIT MAILER: Sent admit card for {reg_no}.")
-            with open("admits/sent.txt", "a") as sent:
-                sent.write(reg_no + "\n")
-        except FileNotFoundError:
-            return None
+def send_email(smtp, data):
+    reg_no = data["id"]
+    try:
+        with open(f"admits/emails/{reg_no}.eml", "rb") as fp:
+            msg = email.message_from_binary_file(fp)
+            smtp.send_message(msg)
+        print(f"ADMITS: Sent admit card for {reg_no}.")
+        return True
+    except KeyboardInterrupt:
+        time.sleep(0.1)
+        return True
+    except FileNotFoundError:
+        return False
 
 
 def run():
     sent = pd.read_csv("active_data/sent.csv")
-    reg_nos = (
-        filename.replace(".eml", "")
-        for filename in os.listdir("admits/emails")
-        if "eml" in filename
-    )
-    reg_nos = [reg_no for reg_no in reg_nos if reg_no not in sent and reg_check(reg_no)]
-    reg_nos = reg_nos[:BATCH_SIZE]
-    print(f"ADMIT MAILER: Sending for the following roll numbers... ({len(reg_nos)})")
-    print("-" * 140)
-    print(reg_nos)
-    print("-" * 140)
-    inp = input("Proceed? (y/N): ").lower()
-    print("-" * 140)
-    if len(inp) >= 1 and inp[0] == "y":
-        with Pool(10) as pool:
-            pool.map(send_email, reg_nos)
+
+    with open("active_data/admit_data.csv") as f, smtplib.SMTP(
+        "mail.isical.ac.in", 587
+    ) as smtp:
+        smtp.login(user=creds["username"], password=creds["password"])
+        reader = csv.DictReader(f)
+        for row in reader:
+            if (
+                (sent[sent.columns[:2]] == np.array([row["id"], row["hash"]]))
+                .all(1)
+                .any()
+            ):
+                continue
+            try:
+                if send_email(smtp, row):
+                    sent.loc[len(sent.index)] = [
+                        row["id"],
+                        row["hash"],
+                        round(time.time() * 1000),
+                    ]
+                    time.sleep(1)
+            except KeyboardInterrupt:
+                break
+
+    sent.to_csv("active_data/sent.csv", index=False)
+
+
+if __name__ == "__main__":
+    run()
