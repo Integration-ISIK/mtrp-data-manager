@@ -12,34 +12,55 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
 # If modifying these scopes, delete the file token.json.
-SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
+SCOPES = ["https://www.googleapis.com/auth/spreadsheets.readonly"]
+
 
 def run():
     creds = None
-    if os.path.exists('gsheets/token.json'):
-        creds = Credentials.from_authorized_user_file('gsheets/token.json', SCOPES)
+    if os.path.exists("gsheets/token.json"):
+        creds = Credentials.from_authorized_user_file("gsheets/token.json", SCOPES)
     # If there are no (valid) credentials available, let the user log in.
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                'gsheets/credentials.json', SCOPES)
+                "gsheets/credentials.json", SCOPES
+            )
             creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
-        with open('gsheets/token.json', 'w') as token:
+        with open("gsheets/token.json", "w") as token:
             token.write(creds.to_json())
 
-    service = build('sheets', 'v4', credentials=creds)
+    service = build("sheets", "v4", credentials=creds)
     sheet = service.spreadsheets()
-    with open("gsheets/sheet_details.json") as sheet_details_file:
+    with open("gsheets/offline_reg_details.json") as sheet_details_file:
         sheet_details = json.load(sheet_details_file)
-        result = sheet.values().get(spreadsheetId=sheet_details["spreadsheet"],
-                                    range=sheet_details["range"]).execute()
-        values = result.get('values', [])
-        with open("raw_data/printed.csv", "w") as f:
+        result = (
+            sheet.values()
+            .get(
+                spreadsheetId=sheet_details["spreadsheet"], range=sheet_details["range"]
+            )
+            .execute()
+        )
+        values = result.get("values", [])
+        with open("gsheets/fetched/offline.csv", "w") as f:
+            writer = csv.writer(f)
+            writer.writerows(row for row in values if row[0] and row[1] and row[2])
+    with open("gsheets/online_reg_details.json") as sheet_details_file:
+        sheet_details = json.load(sheet_details_file)
+        result = (
+            sheet.values()
+            .get(
+                spreadsheetId=sheet_details["spreadsheet"], range=sheet_details["range"]
+            )
+            .execute()
+        )
+        values = result.get("values", [])
+        with open("gsheets/fetched/online.csv", "w") as f:
             writer = csv.writer(f)
             writer.writerows(row for row in values if row[0] and row[1] and row[2])
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     run()
