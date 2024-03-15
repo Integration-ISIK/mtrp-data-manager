@@ -49,7 +49,10 @@ def run():
         lambda e: "Senior" if int(e) > 10 else "Junior", na_action="ignore"
     )
     data_combined["centre"] = (
-        data_combined["centre"].fillna(data_combined["mode"]).astype("category")
+        data_combined["mode"]
+        .replace("Offline", pd.NA)
+        .fillna(data_combined["centre"])
+        .astype("category")
     )
     data_combined["medium"] = (
         data_combined["medium"].fillna("English").astype("category")
