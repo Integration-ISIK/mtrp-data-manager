@@ -26,7 +26,7 @@ def run():
         values = result.get("values", [])
         with open("active_data/raw/offline.csv", "w") as f:
             writer = csv.writer(f)
-            writer.writerows(row for row in values if row[0] and row[1] and row[2])
+            writer.writerows(values)
     with open("fetch/online_reg_details.json") as sheet_details_file:
         sheet_details = json.load(sheet_details_file)
         result = (
@@ -39,7 +39,7 @@ def run():
         values = result.get("values", [])
         with open("active_data/raw/online.csv", "w") as f:
             writer = csv.writer(f)
-            writer.writerows(row for row in values if row[0] and row[1] and row[2])
+            writer.writerows(values)
 
 
 if __name__ == "__main__":
