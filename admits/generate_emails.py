@@ -31,7 +31,7 @@ def make_email(data):
     msg["Subject"] = f"MTRP 2024 Admit Card - {reg_no}"
     msg["From"] = Address("Integration 2024 Automailer", "integration", "isical.ac.in")
     msg["Reply-To"] = Address(
-        "MTRP 2024 Core Team", "admits@", "mtrp.integrationfest.in"
+        "MTRP 2024 Core Team", "admits", "mtrp.integrationfest.in"
     )
     msg["To"] = Address(data["name"], *(data["email"].lower().split("@")[:2]))
     msg["CC"] = Address("MTRP 2024 Core Team", "admits", "mtrp.integrationfest.in")

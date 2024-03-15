@@ -161,7 +161,7 @@ cython_debug/
 
 ####
 
-*credentials.json
+*credentials*.json
 *.csv
 *.xlsx
 *token*

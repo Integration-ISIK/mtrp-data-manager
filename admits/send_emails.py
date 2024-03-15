@@ -11,7 +11,10 @@ import smtplib
 import numpy as np
 import pandas as pd
 
-creds = json.load(open("admits/credentials.json"))
+creds1 = json.load(open("admits/credentials.json"))
+creds2 = json.load(open("admits/credentials2.json"))
+creds3 = json.load(open("admits/credentials3.json"))
+creds4 = json.load(open("admits/credentials4.json"))
 
 BATCH_SIZE = 100
 
@@ -30,7 +33,7 @@ def send_email(smtp, data):
         print(f"ADMITS: Sent admit card for {reg_no}.")
         return True
     except KeyboardInterrupt:
-        time.sleep(0.1)
+        time.sleep(1)
         return True
     except FileNotFoundError:
         return False
@@ -40,9 +43,23 @@ def run():
     sent = pd.read_csv("active_data/sent.csv")
 
     with open("active_data/admit_data.csv") as f, smtplib.SMTP(
-        "mail.isical.ac.in", 587
-    ) as smtp:
-        smtp.login(user=creds["username"], password=creds["password"])
+        creds1["host"], 587
+    ) as smtp1, smtplib.SMTP(creds2["host"], 587) as smtp2, smtplib.SMTP(
+        creds3["host"], 587
+    ) as smtp3, smtplib.SMTP(
+        creds4["host"], 587
+    ) as smtp4:
+        smtp1.starttls()
+        smtp2.starttls()
+        smtp3.starttls()
+        smtp4.starttls()
+        smtp1.login(user=creds1["username"], password=creds1["password"])
+        smtp2.login(user=creds2["username"], password=creds2["password"])
+        smtp3.login(user=creds3["username"], password=creds3["password"])
+        smtp4.login(user=creds4["username"], password=creds4["password"])
+
+        smtps = [smtp1, smtp2, smtp3, smtp4]
+        i = 0
         reader = csv.DictReader(f)
         for row in reader:
             if (
@@ -52,13 +69,18 @@ def run():
             ):
                 continue
             try:
-                if send_email(smtp, row):
+                if send_email(smtps[i % 4], row):
                     sent.loc[len(sent.index)] = [
                         row["id"],
                         row["hash"],
                         round(time.time() * 1000),
                     ]
-                    time.sleep(1)
+                    i += 1
+                    time.sleep(0.3)
+            except smtplib.SMTPDataError:
+                break
+            except smtplib.SMTPResponseException:
+                break
             except KeyboardInterrupt:
                 break
 

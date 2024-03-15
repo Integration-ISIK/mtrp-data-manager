@@ -18,10 +18,12 @@ def run():
     ).set_index("id")
     new_hashes["revision"] = (
         hashes["revision"]
-        + (~new_hashes["hash"].eq(hashes["hash"]) & ~hashes["hash"].isna()).astype(
-            "int"
+        .add(
+            (~new_hashes["hash"].eq(hashes["hash"]) & ~hashes["hash"].isna()),
+            fill_value=0,
         )
-    ) | 0
+        .astype("int")
+    )
     data["hash"] = new_hashes["hash"]
     data["revision"] = new_hashes["revision"]
     new_hashes.to_csv("active_data/integrity.csv")

@@ -49,7 +49,7 @@ centre_code_map = {
 
 def generate_roll_prefix(data):
     return data["category"][0] + (
-        "E" if int(data["exam_date"]) > 16 else (centre_code_map[data["centre"]])
+        "E" if float(data["exam_date"]) > 16 else (centre_code_map[data["centre"]])
     )
 
 
