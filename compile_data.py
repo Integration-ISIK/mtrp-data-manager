@@ -32,8 +32,8 @@ col_map_online = {
 
 
 def run():
-    data_offline = pd.read_csv("gsheets/fetched/offline.csv")
-    data_online = pd.read_csv("gsheets/fetched/online.csv")
+    data_offline = pd.read_csv("active_data/raw/offline.csv")
+    data_online = pd.read_csv("active_data/raw/online.csv")
     data_combined = pd.concat(
         [
             data_offline.rename(columns=col_map_offline).filter(

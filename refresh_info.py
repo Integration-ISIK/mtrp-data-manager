@@ -1,6 +1,6 @@
 import datetime
 
-import gsheets.get_data as get_gsheets_data
+import fetch.gsheets as get_gsheets_data
 import validation.email_check as email_check
 import validation.duplication_check as duplication_check
 import admits.generate_admits as generate_admits

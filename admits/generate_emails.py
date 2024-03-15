@@ -29,12 +29,10 @@ def make_email(data):
 
     msg = EmailMessage()
     msg["Subject"] = f"MTRP 2024 Admit Card - {reg_no}"
-    msg["From"] = Address("Integration 2024 Automailer", "integration", "isical.ac.in")
-    msg["Reply-To"] = Address(
-        "MTRP 2024 Core Team", "admits", "mtrp.integrationfest.in"
-    )
+    msg["From"] = Address("MTRP 2024 Admits", "admits", "mtrp.integrationfest.in")
+    msg["Reply-To"] = Address("MTRP 2024 Team", "admits", "mtrp.integrationfest.in")
     msg["To"] = Address(data["name"], *(data["email"].lower().split("@")[:2]))
-    msg["CC"] = Address("MTRP 2024 Core Team", "admits", "mtrp.integrationfest.in")
+    msg["CC"] = Address("MTRP 2024 Team", "admits", "mtrp.integrationfest.in")
 
     if (data["exam_date"] == "23") or (data["centre"] == "Online"):
         msg.set_content(email_online_txt.format_map(data))

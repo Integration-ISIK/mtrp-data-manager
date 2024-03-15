@@ -165,5 +165,5 @@ cython_debug/
 *.csv
 *.xlsx
 *token*
-gsheets/*.json
+fetch/*.json
 brochure_mailer/sent.txt
