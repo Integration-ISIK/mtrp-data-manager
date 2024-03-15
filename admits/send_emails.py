@@ -37,7 +37,7 @@ def send_email(service, data):
         return True
     except HttpError as error:
         print(f"ADMITS: An error occurred for {reg_no} -- {error}")
-        send_message = None
+        return False
     except FileNotFoundError:
         return False
 
@@ -63,6 +63,8 @@ def run():
                         round(time.time() * 1000),
                     ]
                     time.sleep(0.7)
+            except TimeoutError:
+                break
             except KeyboardInterrupt:
                 time.sleep(1)
                 break

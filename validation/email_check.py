@@ -17,7 +17,9 @@ def run():
         df.loc[
             ((~s) & df["centre"].eq("Online"))
             | df["email"].isna()
-            | df["email"].str.lower().apply(lambda x: not email.match(x))
+            | df["email"]
+            .str.lower()
+            .apply(lambda x: type(x) is not str or not email.match(x))
         ]
         .sort_values("name")
         .filter(
