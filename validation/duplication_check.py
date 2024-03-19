@@ -10,7 +10,9 @@ def run():
     print("-" * 140)
 
     df = pd.read_csv("active_data/admit_data.csv")
-    df["name_cleaned"] = df["name"].map(lambda e: clean.sub("", e.lower()))
+    df["name_cleaned"] = df["name"].map(
+        lambda e: clean.sub("", e.lower()), na_action="ignore"
+    )
     dup_data = (
         df.loc[df["name_cleaned"].duplicated(keep=False)]
         .sort_values("name_cleaned")

@@ -93,8 +93,8 @@ def run():
 
     with open("active_data/admit_data.csv") as f:
         reader = csv.DictReader(f)
-        for row in reader:
-            try:
+        try:
+            for row in reader:
                 if (
                     (
                         generated[generated.columns[:2]]
@@ -137,10 +137,9 @@ def run():
                         row["hash"],
                         round(time.time() * 1000),
                     ]
-            except KeyboardInterrupt:
-                break
+        finally:
+            generated.to_csv("active_data/generated.csv", index=False)
 
-    generated.to_csv("active_data/generated.csv", index=False)
     files = glob.glob("admits/generated/*.aux")
     for f in files:
         os.remove(f)

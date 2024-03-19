@@ -48,14 +48,14 @@ def run():
 
     with open("active_data/admit_data.csv") as f:
         reader = csv.DictReader(f)
-        for row in reader:
-            if (
-                (sent[sent.columns[:2]] == np.array([row["id"], row["hash"]]))
-                .all(1)
-                .any()
-            ):
-                continue
-            try:
+        try:
+            for row in reader:
+                if (
+                    (sent[sent.columns[:2]] == np.array([row["id"], row["hash"]]))
+                    .all(1)
+                    .any()
+                ):
+                    continue
                 if send_email(service, row):
                     sent.loc[len(sent.index)] = [
                         row["id"],
@@ -63,13 +63,8 @@ def run():
                         round(time.time() * 1000),
                     ]
                     time.sleep(0.7)
-            except TimeoutError:
-                break
-            except KeyboardInterrupt:
-                time.sleep(1)
-                break
-
-    sent.to_csv("active_data/sent.csv", index=False)
+        finally:
+            sent.to_csv("active_data/sent.csv", index=False)
 
 
 if __name__ == "__main__":
