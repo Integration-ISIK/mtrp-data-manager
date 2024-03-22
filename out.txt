@@ -1,0 +1,187 @@
+============================================================================================================================================
+MTRP Data Manager -- 2024-03-23T00:35:39.256521+05:30
+============================================================================================================================================
+FETCH: Downloading data...
+FETCH: Downloaded data!
+VALIDATION: Checking for duplicates...
+--------------------------------------------------------------------------------------------------------------------------------------------
+            id                    name         dob category   medium           centre                                email
+165   2024RD82       Aditya Ranjan Roy  2007-02-11   Junior  English  Kolkata (North)           pabitrakumarroy8@gmail.com
+1140  2024ZN13       Aditya Ranjan Roy  2007-11-02   Junior  English           Online           pabitrakumarroy8@gmail.com
+383   2024RJ84               Ahana Das  2007-06-18   Senior  English  Kolkata (North)             ahanadasdas007@gmail.com
+850   2024ZC44               Ahana Das  2008-12-09   Junior  English  Kolkata (North)           sarkar.sayantani@gmail.com
+888   2024ZC83               Ahana Das  2008-12-24   Junior  English           Online                   ghoshopu@gmail.com
+1044  2024ZE45            Aliza Sarwat  2007-02-20   Senior  English  Kolkata (South)        alizasarwat20022007@gmail.com
+1129  2024ZN02           Aliza Sarwat   2007-02-20   Senior  English           Online        alizasarwat20022007@gmail.com
+613   2024KB81             Anirban Pal         NaN   Senior  English  Kolkata (South)                                  NaN
+1075  2024ZE77             Anirban Pal  2006-12-29   Senior  English  Kolkata (South)                   rkmv9372@gmail.com
+345   2024RI56  Archisman Bhattacharya  2007-12-19   Junior  English           Online      pbhattacharya.fipfip1@gmail.com
+635   2024ZA23  Archisman Bhattacharya  2007-01-08   Senior  English  Kolkata (North)             archismanbh17d@gmail.com
+835   2024ZC28   ARCHISMAN CHAKRABORTY  2007-08-06   Senior  English  Kolkata (South)                   ndey0608@gmail.com
+239   2024RE49   Archisman Chakraborty  2008-09-14   Junior  English  Kolkata (North)           archisman1322014@gmail.com
+646   2024ZA35             Aritra Saha  2008-07-17   Junior  English           Online               animasaha996@gmail.com
+637   2024ZA25             Aritra Saha  2008-03-13   Junior  English  Kolkata (North)                 sampamld81@gmail.com
+777   2024ZB69         ARPAN MUKHERJEE  2005-10-07   Senior  English  Kolkata (South)          arpanmukherjee819@gmail.com
+668   2024ZA58         ARPAN MUKHERJEE  2007-06-01   Junior  English           Online                 parthadtk7@gmail.com
+900   2024ZC96             KOUSTAV ROY  2011-09-23   Junior  English         Durgapur              koukero.11023@gmail.com
+362   2024RI88             Koustav Roy  2007-07-26   Senior  English  Kolkata (North)              goutamroy8459@gmail.com
+1133  2024ZN06    Nilanjan Chakraborty  2010-08-25   Junior  English           Online                 tarun10973@gmail.com
+1154  2024ZN27    Nilanjan Chakraborty  2010-08-25   Junior  English           Online                 tarun10973@gmail.com
+326   2024RI11    Pratyush Chakraborty  2008-12-22   Junior  English  Kolkata (North)  chakrabortychitralekha174@gmail.com
+511   2024NA28    Pratyush Chakraborty  2008-12-22   Junior  English  Kolkata (North)                    cms01de@gmail.com
+996   2024ZD94              Priyam Das  2009-06-16   Junior  English           Online            monojkumardas35@gmail.com
+955   2024ZD52              PRIYAM DAS  2009-04-12   Junior  English           Online             classpriyamdas@gmail.com
+1113  2024ZF16               Rupam Das  2007-04-13   Junior  English  Kolkata (North)                rupamdaskhs@gmail.com
+110   2024RC98               Rupam Das  2008-11-30   Junior  English  Kolkata (North)              rupamrita2008@gmail.com
+964   2024ZD61            SAKSHI SINGH  2009-12-20   Junior  English           Online          sakshisingh128900@gmail.com
+1127  2024ZN00            Sakshi Singh  2009-12-20   Junior  English           Online          sakshisingh128900@gmail.com
+558   2024KB26            Soham Halder         NaN   Junior  English  Kolkata (South)                                  NaN
+398   2024RJ66            Soham Halder  2008-02-23   Junior  Bengali  Kolkata (North)       soumen.halder72@rediffmail.com
+355   2024RI78         Soham Mukherjee  2010-01-15   Junior  English  Kolkata (North)               sohamgopal15@gmail.com
+730   2024ZB22         Soham Mukherjee  2007-12-01   Junior  English           Online                drmukho1974@gmail.com
+693   2024ZA84          SOUMOJIT GHOSH  2006-07-13   Senior  English  Kolkata (South)               gsoumojit003@gmail.com
+526   2024NC13          Soumojit Ghosh  2010-03-10   Junior  English           Online             ghoshsunanda40@gmail.com
+1016  2024ZE16          SOUMYADEEP DAS  2006-04-11   Senior  English           Online          soumyadeepdas1104@gmail.com
+442   2024MF78          Soumyadeep Das  2010-09-18   Junior  Bengali  Kolkata (South)         subhasoumyadeepdas@gmail.com
+1012  2024ZE12        SRIJAN MUKHERJEE  2008-09-17   Junior  English           Online                  srijanser@gmail.com
+927   2024ZD24        SRIJAN MUKHERJEE  2008-07-25   Junior  English  Kolkata (South)             shiladitya1981@gmail.com
+1143  2024ZN16           TANISH BISWAS  2008-05-26   Junior  English           Online             tanishbiswas26@gmail.com
+338   2024RI34           Tanish Biswas  2008-05-06   Junior  English  Kolkata (North)          tapankumar.biswas@gmail.com
+--------------------------------------------------------------------------------------------------------------------------------------------
+VALIDATION: Checking for non-Gmail, missing or invalid email for online candidates...
+--------------------------------------------------------------------------------------------------------------------------------------------
+           id                name         dob category   medium           centre                   email
+578  2024KB46      Abhigyan Ghosh         NaN   Junior  English  Kolkata (South)                     NaN
+592  2024KB60  Abhigyan Mahapatra         NaN   Junior  English  Kolkata (South)                     NaN
+612  2024KB80     Abhinjan Mondal         NaN   Senior  English  Kolkata (South)                     NaN
+535  2024KB03     Adrik Mukherjee         NaN   Junior  English  Kolkata (South)                     NaN
+610  2024KB78      Agnik Majumder         NaN   Senior  English  Kolkata (South)                     NaN
+..        ...                 ...         ...      ...      ...              ...                     ...
+538  2024KB06   Tamoghna Tarafder         NaN   Junior  English  Kolkata (South)                     NaN
+559  2024KB27        Tamojeet Pal         NaN   Junior  English  Kolkata (South)                     NaN
+13   2024RA72        Udipta Mitra  2007-02-09   Senior  English           Online  ujjalmitra13@yahoo.com
+549  2024KB17        Ujjwal Kumar         NaN   Junior  English  Kolkata (South)                     NaN
+550  2024KB18         Vatsal Ajey         NaN   Junior  English  Kolkata (South)                     NaN
+
+[87 rows x 7 columns]
+--------------------------------------------------------------------------------------------------------------------------------------------
+REPORTS: Current breakdown -- 1157 candidates with generatable admits:
+--------------------------------------------------------------------------------------------------------------------------------------------
+Junior Extended: 133 (EN) +   0 (BN)
+Junior Online:   185 (EN) +   2 (BN)
+Junior North:    317 (EN) +  41 (BN)
+Junior South:    131 (EN) +   4 (BN)
+Junior Durgapur:  45 (EN) +   0 (BN)
+Senior Extended:  53 (EN) +   0 (BN)
+Senior Online:    83 (EN) +   0 (BN)
+Senior North:    113 (EN) +   3 (BN)
+Senior South:     37 (EN) +   1 (BN)
+Senior Durgapur:   9 (EN) +   0 (BN)
+--------------------------------------------------------------------------------------------------------------------------------------------
+Regenerate unsent admit cards? (y/N): y
+--------------------------------------------------------------------------------------------------------------------------------------------
+ADMITS: Generation failed for ID 2024RA72 -- Online candidate with no Gmail address.
+ADMITS: Generation failed for ID 2024RB18 -- Online candidate with no Gmail address.
+ADMITS: Generation failed for ID 2024RD66 -- Insufficient info.
+ADMITS: Generation failed for ID 2024RE80 -- Online candidate with no Gmail address.
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex)
+ \write18 enabled.
+entering extended mode
+ADMITS: Generation failed for ID 2024RX01 -- Insufficient info.
+ADMITS: Generation failed for ID 2024RX02 -- Insufficient info.
+ADMITS: Generation failed for ID 2024RX03 -- Insufficient info.
+ADMITS: Generation failed for ID 2024RX04 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB00 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB01 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB02 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB03 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB04 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB05 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB06 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB07 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB08 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB09 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB10 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB11 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB12 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB13 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB14 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB15 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB16 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB17 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB18 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB19 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB20 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB21 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB22 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB23 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB24 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB25 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB26 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB27 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB28 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB29 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB30 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB31 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB32 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB33 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB34 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB35 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB36 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB37 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB38 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB39 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB40 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB41 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB42 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB43 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB44 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB45 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB46 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB47 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB48 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB49 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB50 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB51 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB52 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB53 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB54 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB55 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB56 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB57 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB58 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB59 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB60 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB61 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB62 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB63 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB64 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB65 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB66 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB67 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB68 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB69 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB70 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB71 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB72 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB73 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB74 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB75 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB76 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB77 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB78 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB79 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB80 -- Insufficient info.
+ADMITS: Generation failed for ID 2024KB81 -- Insufficient info.
+ADMITS: Generation failed for ID 2024ZN10 -- Online candidate with no Gmail address.
+ADMITS: Generation failed for ID 2024ZN21 -- Online candidate with no Gmail address.
+--------------------------------------------------------------------------------------------------------------------------------------------
+Regenerate unsent draft emails? (y/N): y
+--------------------------------------------------------------------------------------------------------------------------------------------
+ADMITS: Deleting old draft emails...
+ADMITS: Deleted old draft emails!
+--------------------------------------------------------------------------------------------------------------------------------------------
+./main  8.11s user 0.45s system 39% cpu 21.575 total
+
+ADMITS: Sent admit card for 2024RE97 -- 18e678e5add4b386.
+

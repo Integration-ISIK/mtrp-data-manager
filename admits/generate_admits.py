@@ -124,7 +124,7 @@ def run():
                         f"ADMITS: Generation failed for ID {row['id']} -- Online candidate with no phone number."
                     )
                     continue
-                if row["centre"] == "Online" and not row["email"].endswith(
+                if row["centre"] == "Online" and not row["email"].lower().endswith(
                     "@gmail.com"
                 ):
                     print(

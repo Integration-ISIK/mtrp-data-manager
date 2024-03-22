@@ -12,14 +12,19 @@ def run():
 
     df = pd.read_csv("active_data/admit_data.csv")
     df["email"] = df["email"].str.strip().str.lower()
-    s = df["email"].str.endswith("@gmail.com").astype(bool)
     data = (
         df.loc[
-            ((~s) & df["centre"].eq("Online"))
-            | df["email"].isna()
-            | df["email"]
-            .str.lower()
-            .apply(lambda x: type(x) is not str or not email.match(x))
+            df["centre"].eq("Online")
+            & (
+                df["email"].isna()
+                | df["email"]
+                .str.lower()
+                .apply(
+                    lambda x: type(x) is not str
+                    or not x.endswith("@gmail.com")
+                    or not email.match(x)
+                )
+            )
         ]
         .sort_values("name")
         .filter(
